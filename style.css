@@ -1,0 +1,232 @@
+/*
+Theme Name: Bettlegeuse
+Theme URI: https://seusite.com/Bettlegeuse
+Author: Seu Nome
+Description: Template clean, ultra-rápido e customizável inspirado no Astra.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+Text Domain: Bettlegeuse
+*/
+
+/* Reset Básico e Variáveis */
+/*
+Theme Name: Bettlegeuse
+... (mantenha seu cabeçalho original aqui) ...
+Tags: one-column, two-columns, custom-colors, custom-menu, featured-images, full-width-template, theme-options, translation-ready, blog
+*/
+
+
+:root {
+    --btl-primary: #6d28d9; /* Um roxo moderno */
+    --btl-bg: #f8fafc;
+    --btl-card-bg: #ffffff;
+    --btl-text: #1e293b;
+    --container: 1000px;
+}
+
+body {
+    background-color: var(--btl-bg);
+    color: var(--btl-text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Estiloso */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 1rem 0;
+}
+
+.site-header h1 a {
+    color: var(--btl-primary);
+    text-decoration: none;
+    font-weight: 800;
+}
+
+/* Menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--btl-text);
+    font-weight: 500;
+}
+
+/* Card de Post (O "Pulo do Gato") */
+.btl-card {
+    background: var(--btl-card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s;
+}
+
+.btl-card:hover {
+    transform: translateY(-5px);
+}
+
+.btl-card h2 a {
+    color: var(--btl-text);
+    text-decoration: none;
+}
+
+.btl-card h2 a:hover {
+    color: var(--btl-primary);
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* Joga o logo para a esquerda e o menu para a direita */
+    align-items: center;            /* Alinha os dois verticalmente ao centro */
+    padding: 15px 20px;
+}
+
+.site-logo img {
+    transition: transform 0.3s ease;
+}
+
+.site-logo img:hover {
+    transform: scale(1.05); /* Efeito sutil ao passar o mouse */
+}
+/* Ajuste do Cabeçalho */
+.site-header .container {
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, Nav na direita */
+    align-items: center;
+    padding: 20px;
+}
+
+.main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espaço entre menu e redes sociais */
+}
+
+/* Estilo para a lista do Menu Principal */
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* Links de Redes Sociais */
+.social-links {
+    display: flex;
+    gap: 15px;
+    border-left: 1px solid #e2e8f0;
+    padding-left: 20px;
+    font-size: 14px;
+}
+/* Botões com efeito moderno */
+.button, button, input[type="submit"] {
+    background-color: var(--btl-primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Cards de post mais elegantes */
+.btl-card {
+    border: 1px solid rgba(0,0,0,0.05);
+    background: #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+.btl-card:hover {
+    border-color: var(--btl-primary);
+}
+/* ==========================================================================
+   RESPONSIVIDADE (MOBILE FIRST)
+   ========================================================================== */
+
+/* Ajustes para Tablets e Celulares (Telas menores que 992px) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; /* Empilha a Sidebar embaixo do conteúdo */
+        gap: 20px !important;
+    }
+
+    .site-header .container {
+        flex-direction: column; /* Centraliza logo e menu no mobile */
+        text-align: center;
+        gap: 15px;
+    }
+
+    #secondary {
+        width: 100% !important; /* Sidebar ocupa a largura total */
+        margin-top: 40px;
+    }
+
+    .main-navigation {
+        border-left: none;
+        padding-left: 0;
+        justify-content: center;
+    }
+
+    .social-links {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 10px;
+        justify-content: center;
+    }
+}
+
+/* Ajustes para Celulares Pequenos (Telas menores que 600px) */
+@media (max-width: 600px) {
+    .site-logo img {
+        height: 45px !important; /* Diminui o logo no celular */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .btl-card {
+        padding: 15px !important;
+    }
+
+    .main-navigation ul {
+        flex-direction: column; /* Menu vira uma lista vertical */
+        gap: 10px;
+    }
+}
